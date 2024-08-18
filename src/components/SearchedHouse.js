@@ -14,7 +14,7 @@ const SearchedHouse = (props) => {
         let fetchData = async () => {
             let result = await axios.get(process.env.REACT_APP_BACKEND_URL+"house/houseById/"+loca.state._id);
           // console.log(housesData);
-          setSearchedHouse(result.data[0])
+          setSearchedHouse(result.data)
         }
         fetchData();
       },[]);
